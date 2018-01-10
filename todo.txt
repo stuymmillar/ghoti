@@ -1,0 +1,10 @@
+Ghoti - Max Millar and Adrian Kloskowski
+APCS1 PD8
+
+To Do List:
+
+1.Create skeletons for each class that can be compiled.
+2.Create cardStack class.
+3.Create card class.
+4.Create cell, foundation, and cascade classes.
+5.Create driver class freeCell.
