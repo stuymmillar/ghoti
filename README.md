@@ -13,11 +13,11 @@ the game is won.
 To run the program, run the driver file freeCell.java with the following
 commands in the terminal.
 
-'''
+```
 ~/ghoti javac freeCell.java
 
 ~/ghoti java freeCell
-'''
+```
 =======
 To run the program, run the pre-compiled driver file Frecell.class.
 >>>>>>> a579707969989e1ce6f55ed356f127568332d595
