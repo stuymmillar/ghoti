@@ -9,7 +9,6 @@ to determine whether a move is legal or not, and move the card to another stack
 if it is legal. When each foundation is built up with each card in its suit,
 the game is won.
 
-<<<<<<< HEAD
 To run the program, run the driver file freeCell.java with the following
 commands in the terminal.
 
