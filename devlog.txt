@@ -3,7 +3,7 @@ Max Millar
 Adrian Kloskowski
 pd 8
 ---------------------
-Slide Puzzle with Solver
+FreeCell
 
 
 
