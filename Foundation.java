@@ -1,4 +1,4 @@
-public class Foundation {
+public class Foundation extends CardStack {
     Integer suit;
 
     public Foundation(Integer i){
