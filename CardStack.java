@@ -8,6 +8,12 @@ public abstract class CardStack {
 	return c;
     }
     public Card removeCard(){
-	return cards.remove(cards.size());
+	return cards.remove(cards.size()-1);
+    }
+    public Card getCard(int i){
+	return cards.get(i);
+    }
+    public Card getCard(){
+	return getCard(cards.size()-1);
     }
 }

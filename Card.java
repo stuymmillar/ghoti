@@ -5,12 +5,13 @@ public class Card {
     public Card(Integer i){
 	id = i;
     }
-    public String getSuit(){
-	int i = id/13;
-        return SUITS[i];
+    public Integer getSuit(){
+        return id/13;
     }
-    public String getRank(){
-	int i = id%13;
-	return RANKS[i];
+    public Integer getRank(){
+        return id%13;
+    }
+    public String toString(){
+	return RANKS[getRank()] + SUITS[getSuit()];
     }
 }
