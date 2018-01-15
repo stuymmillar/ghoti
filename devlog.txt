@@ -46,9 +46,7 @@ COOL STUFF LEARNED
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We changed ___ to ___ bc...
-<etc>
-<etc>
+We changed our project from Slide Puzzle Solver to FreeCell
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -68,10 +66,24 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-
 yyyy-mm-dd
 --------------------------------------------------------------
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
+==============================================================
+
+2018-01-08
+--------------------------------------------------------------
+Max :: Added proposal and uml for new FreeCell project
+==============================================================
+
+2018-01-10
+--------------------------------------------------------------
+Max :: Finalized change to FreeCell project; added skeleton classes
+==============================================================
+
+2018-01-11
+--------------------------------------------------------------
+Adrian :: Functionality added to CardStack family of classes
 ==============================================================
