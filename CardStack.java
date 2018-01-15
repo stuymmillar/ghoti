@@ -16,6 +16,12 @@ public abstract class CardStack {
     public Card getCard(){
 	return getCard(cards.size()-1);
     }
+	public int getLength(){
+		return cards.size();
+	}
+	public Boolean isEmpty(){
+		return cards.size()==0;
+	}
 
     public String toString(){
 	String s = "";
