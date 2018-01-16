@@ -3,6 +3,7 @@ import java.util.Random;
 public class FreeCell {
 	static CardStack[] stacks = new CardStack[16];
 	static int[] deck = new int[52];
+    static final String[] IDS = {"F1", "F2", "F3", "F4", "DD", "CC", "HH", "SS", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"};
     public static void startGame(){
 		for (int i = 0; i < 4; i++) {
 			stacks[i] = new Cell();
@@ -38,7 +39,7 @@ public class FreeCell {
     
 	static int maxCasc = 0;
 	public static String getBoard(){
-		String str = "[[=-=-=-free-cell-=-=-=]\nF1|F2|F3|F4|DD|CC|HH|SS\n";
+		String str = "[=-=-=-free-cell-=-=-=]\nF1|F2|F3|F4|DD|CC|HH|SS\n";
 		for (int i = 0; i < 8; i++) {
 			if (stacks[i].isEmpty()) {
 				str += "  ";
@@ -76,10 +77,21 @@ public class FreeCell {
 	}
 	return val;
     }
+
+    public static int getStackInd (String s) {
+	for (int i = 0; i < 16; i++) {
+	    if (IDS[i].equals(s)) return i;
+	}
+	return -1;
+    }
 	
     public static void main (String[] args){
 		startGame();
 		System.out.println(getBoard());
-		moveCard(
+
+		//test funcs
+		moveCard(stacks[8], stacks[5]);
+		System.out.println(getBoard());
+		System.out.println(getStackInd("F1"));
     }
 }
