@@ -89,9 +89,35 @@ public class FreeCell {
 		startGame();
 		System.out.println(getBoard());
 
-		//test funcs
+		int option1;
+		String option2;
+		String option3;
+		Keyboard k = new Keyboard();
+		while(stacks[4].getLength == 13 && stacks[5].getLength == 13 && stacks[6].getLength == 13 && stacks[7].getLength == 13){
+		System.out.println(getBoard());
+		System.out.println("Which would you like do do?(1 - 3)\n1.Move a Card\n2.Reset Board\n3.New Board");
+		option1 = k.readInt();
+		if(option1 == 1){
+		    System.out.println("Which column would you like to move a card from?(Ex. F1, C1, DD)");
+		    option2 = k.readString();
+		    System.out.println("Which column would you like to move a card to?(Ex. F1, C1, DD)");
+		    option3 = k.readString();
+		    
+		}
+		else if(option1 == 2){
+
+		}
+		else if(option1 == 3){
+		    
+		}
+		else{
+
+		}
+		}
+    }
+		/*//test funcs
 		moveCard(stacks[8], stacks[5]);
 		System.out.println(getBoard());
-		System.out.println(getStackInd("F1"));
+		System.out.println(getStackInd("F1"));*/
     }
-}
+
