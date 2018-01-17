@@ -1,4 +1,5 @@
 import java.util.Random;
+import cs1.Keyboard;
 
 public class FreeCell {
 	static CardStack[] stacks = new CardStack[16];
@@ -26,15 +27,8 @@ public class FreeCell {
 			deck[j] = i; //the untouched index will be the single Ace of Hearts
 		}
 		
-		//distribute deck amongst cascades
-		for (int i = 0; i < 6; i++) {
-			for (int j = 0; j < 8; j++) {
-				stacks[8+j].addCard(new Card(deck[i*8+j]));
-			}
-		}
-		for (int j = 0; j < 4; j++) {
-			stacks[8+j].addCard(new Card(deck[48+j]));
-		}
+		resetGame();
+		
     }
     
 	static int maxCasc = 0;
@@ -85,6 +79,25 @@ public class FreeCell {
 	return -1;
     }
 	
+	public static void resetGame() {
+		//erase card stacks
+		for (CardStack cs : stacks) {
+			while (!cs.isEmpty()) {
+				cs.removeCard();
+			}
+		}
+		
+		//distribute deck amongst cascades
+		for (int i = 0; i < 6; i++) {
+			for (int j = 0; j < 8; j++) {
+				stacks[8+j].addCard(new Card(deck[i*8+j]));
+			}
+		}
+		for (int j = 0; j < 4; j++) {
+			stacks[8+j].addCard(new Card(deck[48+j]));
+		}
+	}
+	
     public static void main (String[] args){
 	startGame();
 	int option1;
@@ -93,7 +106,7 @@ public class FreeCell {
 	Keyboard k = new Keyboard();
 	Boolean contains = false;
 	int ind1,ind2;
-	while(stacks[4].getLength == 13 && stacks[5].getLength == 13 && stacks[6].getLength == 13 && stacks[7].getLength == 13){
+	while(stacks[4].getLength() != 13 && stacks[5].getLength() != 13 && stacks[6].getLength() != 13 && stacks[7].getLength() != 13){
 	    System.out.println(getBoard());
 	    System.out.println("Which would you like do do?(1 - 3)\n1.Move a Card\n2.Reset Board\n3.New Board");
 	    option1 = k.readInt();
@@ -104,8 +117,8 @@ public class FreeCell {
 		option3 = k.readString();
 		ind1 = getStackInd(option2);
 		ind2 = getStackInd(option3);
-		if((ind1 != -1) && (ind2 != -1) && stacks[ind1].canMove() && stacks[ind2].canMove()){
-		    System.out.println("Moved " + stacks[ind2].getCard() " from " + option2 + " to " option3 + ".");
+		if((ind1 != -1) && (ind2 != -1) && stacks[ind2].canMove(stacks[ind1].getCard())){
+		    System.out.println("Moved " + stacks[ind2].getCard() + " from " + option2 + " to " + option3 + ".");
 		}
 		else{
 		    System.out.println("That is an invalid move.");
@@ -122,6 +135,7 @@ public class FreeCell {
 		System.out.println("That is an invalid option");
 	    }
 	}
+	System.out.println("CONGRATULATIONS!\nYou won!\n\nPerhaps play another game?");
     }
     /*//test funcs
       moveCard(stacks[8], stacks[5]);
