@@ -86,38 +86,47 @@ public class FreeCell {
     }
 	
     public static void main (String[] args){
-		startGame();
-		System.out.println(getBoard());
-
-		int option1;
-		String option2;
-		String option3;
-		Keyboard k = new Keyboard();
-		while(stacks[4].getLength == 13 && stacks[5].getLength == 13 && stacks[6].getLength == 13 && stacks[7].getLength == 13){
-		System.out.println(getBoard());
-		System.out.println("Which would you like do do?(1 - 3)\n1.Move a Card\n2.Reset Board\n3.New Board");
-		option1 = k.readInt();
-		if(option1 == 1){
-		    System.out.println("Which column would you like to move a card from?(Ex. F1, C1, DD)");
-		    option2 = k.readString();
-		    System.out.println("Which column would you like to move a card to?(Ex. F1, C1, DD)");
-		    option3 = k.readString();
-		    
-		}
-		else if(option1 == 2){
-
-		}
-		else if(option1 == 3){
-		    
+	startGame();
+	int option1;
+	String option2;
+	String option3;
+	Keyboard k = new Keyboard();
+	Boolean contains = false;
+	int ind1,ind2;
+	while(stacks[4].getLength == 13 && stacks[5].getLength == 13 && stacks[6].getLength == 13 && stacks[7].getLength == 13){
+	    System.out.println(getBoard());
+	    System.out.println("Which would you like do do?(1 - 3)\n1.Move a Card\n2.Reset Board\n3.New Board");
+	    option1 = k.readInt();
+	    if(option1 == 1){
+		System.out.println("Which column would you like to move a card from?(Ex. F1, C1, DD)");
+		option2 = k.readString();
+		System.out.println("Which column would you like to move a card to?(Ex. F1, C1, DD)");
+		option3 = k.readString();
+		ind1 = getStackInd(option2);
+		ind2 = getStackInd(option3);
+		if((ind1 != -1) && (ind2 != -1) && stacks[ind1].canMove() && stacks[ind2].canMove()){
+		    System.out.println("Moved " + stacks[ind2].getCard() " from " + option2 + " to " option3 + ".");
 		}
 		else{
+		    System.out.println("That is an invalid move.");
+		}
+		    
+	    }
+	    else if(option1 == 2){
+		resetGame();
+	    }
+	    else if(option1 == 3){
+		startGame();
+	    }
+	    else{
+		System.out.println("That is an invalid option");
+	    }
+	}
+    }
+    /*//test funcs
+      moveCard(stacks[8], stacks[5]);
+      System.out.println(getBoard());		System.out.println(getStackInd("F1"));*/
+}
 
-		}
-		}
-    }
-		/*//test funcs
-		moveCard(stacks[8], stacks[5]);
-		System.out.println(getBoard());
-		System.out.println(getStackInd("F1"));*/
-    }
+
 
