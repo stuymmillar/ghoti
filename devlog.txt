@@ -5,52 +5,30 @@ pd 8
 ---------------------
 FreeCell
 
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-USAGE:
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete these instructions once all teammates understand usage.
-  (from tilde bar above to tilde bar below)
-
-devlog--
-Use keyboard shortcut to jump to end,
- replicate entry template,
- modify appropriately.
-
-zone of reflection--
-Flesh out each category whenever necessary, appropriate.
- Need not be fully filled in until end of project,
- but best done as you go along.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<Wow, we so BOSS bc...>
+We overcame switching projects midway through the time allotted by working very hard, and outlining the FreeCell project in much greater detail to be ready for when we began coding.
+We overcame only having 2 members by working very hard.
+We fixed a problem in the canMove() method which allowed certain cards to move when they shouldn't have been able to.
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
->
+None that we know of.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<wow! oo! etc!...>
+It's alot harder than you would think to shuffle a deck of Card classes to an array in an array of other classes.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We changed our project from Slide Puzzle Solver to FreeCell
+We changed our project from Slide Puzzle Solver to FreeCell.
+We added a lot more helper methods which we determined would make the project much easier during development.
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<tales of wisdom gained...>
+We learned that you should leave lots of time for bug fixing and testing before the project is due.
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -66,13 +44,6 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-yyyy-mm-dd
---------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-==============================================================
-
 2018-01-08
 --------------------------------------------------------------
 Max :: Added proposal and uml for new FreeCell project
@@ -86,4 +57,15 @@ Max :: Finalized change to FreeCell project; added skeleton classes
 2018-01-11
 --------------------------------------------------------------
 Adrian :: Functionality added to CardStack family of classes
+==============================================================
+
+2018-01-15
+--------------------------------------------------------------
+Adrian :: startGame() and getBoard() added to driver.
+==============================================================
+
+2018-01-16
+--------------------------------------------------------------
+Adrian :: Fixed errors on driver main and added reset functionality.
+Max :: Added user input and dialogue options, fixed a bug involving canMove() for cascades.
 ==============================================================
