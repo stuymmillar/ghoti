@@ -118,6 +118,7 @@ public class FreeCell {
 		ind1 = getStackInd(option2);
 		ind2 = getStackInd(option3);
 		if((ind1 != -1) && (ind2 != -1) && stacks[ind2].canMove(stacks[ind1].getCard())){
+			moveCard(stacks[ind1], stacks[ind2]);
 		    System.out.println("Moved " + stacks[ind2].getCard() + " from " + option2 + " to " + option3 + ".");
 		}
 		else{
