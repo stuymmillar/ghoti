@@ -45,7 +45,7 @@ public class FreeCell {
 		}
 		str += "\n@~-~-~-~-~-~-~-~-~-~-~@\nC1|C2|C3|C4|C5|C6|C7|C8\n=-=-=-=-=-=-=-=-=-=-=-=\n";
 		
-		for (int i = 8; i < 15; i++) {//determines how long to make the board
+		for (int i = 8; i < 16; i++) {//determines how long to make the board
 			if (stacks[i].getLength()>maxCasc) maxCasc = stacks[i].getLength();
 		}
 		for (int i = 0; i < maxCasc; i++) {
